@@ -1,8 +1,0 @@
-<link href="kanbun.css" rel="stylesheet" />
-<script src="kanbun.js"></script>
-<div class="kanbun okurigana-sinking" id="body">
-  <p>大泊瀬幼武天皇、雄朝嬬稚子宿禰天皇第五子也。天皇、産而神光滿[レ]殿、長而伉健過[レ]人。</p>
-  <p>大(おほ)泊(はつ)瀬(せ)幼(わか)武(たけるの)天(すめら)皇(みこと)</p>
-  <p>大泊瀬幼武天皇、雄朝嬬稚子宿禰天皇第五子也。天皇、産而神光滿[レ]殿、長而伉健過[レ]人。</p>
-</div>
-<script>convertKanbunDiv(document.getElementById("body"));</script>
