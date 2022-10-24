@@ -25,6 +25,8 @@
     .then(response => {
       console.log(response.data);
       alert('222');
+      alert(response.data);
+      return response.data;
     })
     .catch(error => {
       alert('333')
@@ -34,11 +36,6 @@
     .finally(() => {
     // skip
     });
-    alert('444');
-    alert(response.data);
-    contentsArray = response.data;
-    alert(contentsArray);
-    return contentsArray
   /*_
    contentsArray = [
     "日本書紀　巻第十四\n",
@@ -47,16 +44,16 @@
   ].join("\n")
   */
   }
- function convert() {
-    alert('AAA');
-    contentsArray = getText();
+ function convert2() {
+__    alert('AAA');
+    var contentsArray = getText();
     alert('BBB');
-    new_contentsArray = "<p>" + contentsArray.replace(/\n/g, "</p><p>") + "</p>";
+    var new_contentsArray = "<p>" + contentsArray.replace(/\n/g, "</p><p>") + "</p>";
     document.getElementById("container").textContent =  new_contentsArray;
   }
   //convert();
   alert('ZZZ');
-  convert();
+  convert2();
   alert('YYY');
   convertKanbunDiv(document.getElementById("container"));
 </script>
@@ -65,13 +62,13 @@
  function convert() {
     alert('AAA');
  //   contentsArray = getText();
-   contentsArray = [
+   var contentsArray = [
     "日本書紀　巻第十四\n",
     "大(おほ)泊(はつ)瀬(せ)幼(わか)武(たけるの)天(すめら)皇(みこと)\n",
     "大泊瀬幼武天皇、雄(を)朝(あさ)津(つ)間(ま)稚(わく)子(ごの)宿(すく)禰(ねの)天(すめら)皇(みこと)第五子也。天皇、産(あ)レマシテ而神(しん)光(くわう)滿テリ[レ]殿(おおほとの)ニ、長(ひととな)リテ而伉(かう)健(けん)ニマシマスコト過ギタリ[レ]人(ひと)に。\",
   ].join("\n");
     alert('BBB');
-    new_contentsArray = "<p>" + contentsArray.replace(/\n/g, "</p><p>") + "</p>";
+    var new_contentsArray = "<p>" + contentsArray.replace(/\n/g, "</p><p>") + "</p>";
     document.getElementById("container").textContent =  new_contentsArray;
   }
    alert('ZZZ');
