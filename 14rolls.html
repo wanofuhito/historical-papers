@@ -19,8 +19,10 @@
 </div>
 <script>
   axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt')
+  alert('111')
   .then(response => {
      console.log(response.data);
+    alert('222')
   })
   .catch(error => {
     console.error(error);
@@ -28,9 +30,11 @@
   .finally(() => {
     // skip
   });
+  alert('333')
+  alert(response.data)
    contentsArray = response.data
    alert(contentsArray)
-  /*
+  /*_
    contentsArray = [
     "日本書紀　巻第十四\n",
     "大(おほ)泊(はつ)瀬(せ)幼(わか)武(たけるの)天(すめら)皇(みこと)\n",
