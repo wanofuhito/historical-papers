@@ -48,7 +48,9 @@
   */
   }
  function convert() {
+    alert('AAA');
     contentsArray = getText();
+    alert('BBB');
     new_contentsArray = "<p>" + contentsArray.replace(/\n/g, "</p><p>") + "</p>";
     document.getElementById("container").textContent =  new_contentsArray;
   }
