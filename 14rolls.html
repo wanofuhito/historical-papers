@@ -25,12 +25,14 @@
     alert('222');
   })
   .catch(error => {
+    alert('333')
+    alert(error)
     console.error(error);
   })
   .finally(() => {
     // skip
   });
-  alert('333');
+  alert('444');
   alert(response.data);
    contentsArray = response.data;
    alert(contentsArray);
