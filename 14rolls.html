@@ -49,7 +49,8 @@ __    alert('AAA');
     var contentsArray = getText();
     alert('BBB');
     var new_contentsArray = "<p>" + contentsArray.replace(/\n/g, "</p><p>") + "</p>";
-    document.getElementById("container").textContent =  new_contentsArray;
+    document.getElementById("container").innerHTML =  new_contentsArray;
+    //document.getElementById("container").textContent =  new_contentsArray;
   }
   //convert();
   alert('ZZZ');
