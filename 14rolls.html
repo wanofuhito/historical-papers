@@ -22,24 +22,12 @@
 <script>
   //var result;
   function get_text(){
-    axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt')
-      .then(function (response) {
-      // handle success
-        const result = response.data;
-        console.log(result);
-        return result;
-      })
-     .catch(function (error) {
-      // handle error
-       console.log(error);
-     })
-     .finally(function () {
-       // always executed
-     });
+    let res = axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt');
+    return res.data;
   }
   function convert() {
   //  alert('AAA');
-    const contentsArray = get_text().then();
+    const contentsArray = get_text();
     console.log(contentsArray);
  //   console.log(result);
   //  contentsArray = result;
