@@ -21,12 +21,11 @@
  
 <script>
   function get_text(){
-    // const axios = require('axios').default;
-
     axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt')
       .then(function (response) {
       // handle success
        console.log(response.data);
+       return response.data;
       })
      .catch(function (error) {
       // handle error
