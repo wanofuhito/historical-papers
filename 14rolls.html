@@ -30,7 +30,7 @@
   ].join("\n");
     alert('BBB');
     var new_contentsArray = "<p>" + contentsArray.replace(/\n/g, "</p><p>") + "</p>";
-    document.getElementById("container").textContent =  new_contentsArray;
+    document.getElementById("container").innerHTML =  new_contentsArray;
   }
    alert('ZZZ');
    convert();
