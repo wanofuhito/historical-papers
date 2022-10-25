@@ -25,7 +25,7 @@
     const filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
     const pathname = location.pathname.split("/");
     const foldername = pathname[pathname.length-2];
-    const donload_url = window.location.protocol + '//' + window.location.hostname + '/'+ pathname + '/' + filename;
+    const donload_url = window.location.protocol + '//' + window.location.hostname + '/'+ foldername + '/' + filename;
     console.log(donload_url);
     return new Promise((resolve, reject) => {
         axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt')
