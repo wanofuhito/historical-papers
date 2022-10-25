@@ -22,7 +22,8 @@
 <script>
   //var result;
   function get_text(){
-    let res = axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt');
+    const res = await axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt');
+    console.log(res.data);
     return res.data;
   }
   function convert() {
