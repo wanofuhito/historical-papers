@@ -20,8 +20,9 @@
 
  
 <script>
+  var result;
   function get_text(){
-    var result;
+   
     axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt')
       .then(function (response) {
       // handle success
@@ -41,6 +42,9 @@
   //  alert('AAA');
     var contentsArray = get_text();
     console.log(contentsArray);
+    console.log(result);
+    contentsArray = result;
+     console.log(contentsArray);
   // var contentsArray = [
   //  "日本書紀　巻第十四",
   //  "大(おほ)泊(はつ)瀬(せ)幼(わか)武(たけるの)天(すめら)皇(みこと)",
