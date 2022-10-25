@@ -38,7 +38,7 @@
             });
     });
   }
-  function convert() {
+  async function convert() {
     let data = await get_data();
     console.log(data);
     var new_contentsArray = "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
