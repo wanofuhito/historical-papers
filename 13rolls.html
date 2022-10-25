@@ -1,0 +1,59 @@
+<link href="kanbun.css" rel="stylesheet" />
+<script src="kanbun.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<style>
+  div.content {
+    font-size: 20px;
+    height: 30em;
+  }
+  div.box{
+    background: #F5F6CE;
+    border: 1px solid #999;
+ }
+</style>
+
+<div class="kanbun betagumi okurigana-sinking content box" id="container">
+  <p>日本書紀　巻第十四 dummy</p>
+  <p>大(おほ)泊(はつ)瀬(せ)幼(わか)武(たけるの)天(すめら)皇(みこと)</p>
+  <p>大泊瀬幼武天皇、雄(を)朝(あさ)津(つ)間(ま)稚(わく)子(ごの)宿(すく)禰(ねの)天(すめら)皇(みこと)第五子也。天皇、産(あ)レマシテ而神(しん)光(くわう)滿テリ[レ]殿(おおほとの)ニ、長(ひととな)リテ而伉(かう)健(けん)ニマシマスコト過ギタリ[レ]人(ひと)に。</p>
+</div>
+
+ 
+<script>
+  function get_download_url(){
+    const url = window.location.href;
+    const filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
+    const pathname = location.pathname.split("/");
+    const foldername = pathname[pathname.length-2];
+    const download_url = window.location.protocol + '//' + window.location.hostname + '/'+ foldername + '/' + filename;
+    console.log(download_url);
+    return download_url;
+  }
+  function get_data() {
+    return new Promise((resolve, reject) => {
+        //axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt')
+        axios.get(get_download_url())
+            .then(function (response) {
+                // 成功時に実行
+                // response.dataに実際のデータが入っている
+                let result = response.data;
+                resolve(result);
+            })
+            .catch(function (error) {
+                // エラー時に実行
+                reject(error);
+            })
+            .then(function () {
+                // 常に実行
+            });
+    });
+  }
+  async function convert() {
+    let data = await get_data();
+    console.log(data);
+    document.getElementById("container").innerHTML =  "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
+    convertKanbunDiv(document.getElementById("container"));
+  }
+   convert();
+   
+</script>
