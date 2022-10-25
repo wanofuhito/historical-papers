@@ -24,7 +24,7 @@
     axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt')
       .then(function (response) {
       // handle success
-        let result = JSON.stringify(response.data)
+        let result = new String(response.data)
         console.log(result);
         return result;
       })
