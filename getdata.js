@@ -1,4 +1,3 @@
-<script>
   function get_download_url(){
     const url = window.location.href;
     const filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
@@ -30,8 +29,6 @@
   async function convert(id) {
     let data = await get_data();
     console.log(data);
-    document.getElementById("container").innerHTML =  "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
+    document.getElementById(id).innerHTML =  "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
     convertKanbunDiv(document.getElementById(id));
   }
-     
-</script>
