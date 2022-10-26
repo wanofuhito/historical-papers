@@ -19,7 +19,7 @@ const otherBrackets = {
 const punctuationStr = '〻―・、，。…「」『』';
 
 function isKana(str) {
-    
+    return true;
     let code = str.charCodeAt();
     if (str === '・') return false; // ・ is in the katakana block but treated as punctuation here
     if (parseInt('3040', 16) <= code && code <= parseInt('30FF', 16)) return true; // Hiragana & Katakana
