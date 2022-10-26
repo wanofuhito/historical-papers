@@ -1,25 +1,46 @@
-<link href="kanbun.css" rel="stylesheet" />
-<script src="kanbun.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="getdata.js"></script>
-<style>
-  div.content {
-    font-size: 20px;
-    height: 30em;
-  }
-  div.box{
-    background: #F5F6CE;
-    border: 1px solid #999;
- }
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="HandheldFriendly" content="True" />
+	<title>日本書紀</title>
+	<link rel="canonical" href="https://wanofuhito.github.io/">
+	<link rel="stylesheet" href="kanbun.css">
+  <script src="kanbun.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="getdata.js"></script>
+  <style>
+    div.content {
+      font-size: 20px;
+      height: 30em;
+    }
+    div.box{
+      background: #F5F6CE;
+      border: 1px solid #999;
+   }
 </style>
+</head>
 
-<div class="kanbun betagumi okurigana-sinking content box" id="container">
-  <p>日本書紀　巻第十四 dummy</p>
-  <p>大(おほ)泊(はつ)瀬(せ)幼(わか)武(たけるの)天(すめら)皇(みこと)</p>
-  <p>大泊瀬幼武天皇、雄(を)朝(あさ)津(つ)間(ま)稚(わく)子(ごの)宿(すく)禰(ねの)天(すめら)皇(みこと)第五子也。天皇、産(あ)レマシテ而神(しん)光(くわう)滿テリ[レ]殿(おおほとの)ニ、長(ひととな)リテ而伉(かう)健(けん)ニマシマスコト過ギタリ[レ]人(ひと)に。</p>
-</div>
+<body>
+	<header>
+		<h1>日本書紀</h1>
+		<nav>ヘッダーナビゲーション</nav>
+	</header>
+	
+  <article>
+    <div class="kanbun betagumi okurigana-sinking content box" id="container">
+      <p>感ジテハ[レ]時ニ花ニモ濺(そそ)ギ[レ]淚ヲ，恨ミデハ[レ]別レヲ鳥ニモ驚カス[レ]心ヲ。</p>
+    </div>
+  </article>
+	
+  <footer>
+		<p>© wanofuhito</p>
+	</footer>
+  <script>
+     convert('container');
+  </script>
+</body>
 
- 
-<script>
-   convert('container');
-</script>
+</html>
