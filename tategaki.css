@@ -1,0 +1,45 @@
+body { 
+-webkit-writing-mode: vertical-rl; /* 実装済 */
+-moz-writing-mode: vertical-rl; /* 実装済 */
+-ms-writing-mode: vertical-rl; /* 実装済 */
+writing-mode: vertical-rl;
+
+-webkit-text-orientation: upright; /* 実装済 */
+-moz-text-orientation: upright; /* 未実装 */
+-ms-text-orientation: upright; /* 実装済 */
+text-orientation: upright; 
+}
+
+.combine { 
+-webkit-text-combine: horizontal; /* 実装済 */
+-moz-text-combine-upright: all; /* 実装済(Firefox nightly 版) */
+-ms-text-combine-horizontal: all; /* 実装済 */
+text-orientation: all; 
+}
+
+ruby { 
+-webkit-ruby-position: over; /* 実装済 */
+-moz-ruby-position: over; /* 実装済 */
+-ms-ruby-position: over; /* 実装済 */
+ruby-position: over; /* 実装済 */
+}
+
+.underline { 
+text-decorationn: over;
+-webkit-text-underline-position: right; /* 未実装 */
+-moz-text-underline-positionr: right; /* 未実装 */
+-ms-text-underline-position: right; /* 実装済 */
+text-underline-position: right; 
+}
+
+.mark { 
+-webkit-text-emphasis-style: dot filled; /* 実装済 */
+-moz-text-emphasis-style: dot filled; /* 未実装 */
+-ms-text-emphasis-style: dot filled; /* 未実装 */
+text-emphasis-style: dot filled; /* 実装済 */
+
+-webkit-text-emphasis-color: #ff0000; /* 実装済 */
+-moz-text-emphasis-color: #ff0000; /* 未実装 */
+-ms-text-emphasis-color: #ff0000; /* 未実装 */
+text-emphasis-color: #ff0000; 
+}
