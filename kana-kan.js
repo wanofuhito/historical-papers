@@ -38,47 +38,6 @@ function replaceBetween(str, left, right, from, to, condition = function () { re
 }
 
 function toHTML(str) {
-    let arr = [...str];
-    for (let i = 0, lastBracketIndex = -1; i < arr.length; i++) {
-        if (leftBrackets.includes(arr[i])) lastBracketIndex = i;
-        if (lastBracketIndex === -1) {
-            if (isKana(arr[i])) arr[i] = `{${arr[i]}}`;
-            else arr[i] = `“⌊${arr[i]}⌋”`;
-        }
-        if (rightBrackets.includes(arr[i])) lastBracketIndex = -1;
-    }
-    str = arr.join('');
-    str = str.replace(/}{/g, '');
-    str = str.replace(new RegExp(`”([${leftBracketsStr}])`, 'g'), '$1');
-    str = str.replace(new RegExp(`([${rightBracketsStr}])(“)`, 'g'), '$1”$2');
-    if (rightBrackets.includes(str.slice(-1))) str += '”';
-    str = str.replace(/⌊‘⌋”/g, '‘');
-    str = str.replace(/“⌊’⌋/g, '’');
-    str = str.replace(new RegExp(`”“⌊([${punctuationStr}])⌋`, 'g'), '⦉$1⦊');
-    // now, str has been fully annotated
-
-      // no furigana, use no <ruby>
-    while (str !== (str = str.replace(/(‘[^’]*<\/?)(ruby|rb)/g, '$1span'))); // inside kanji must have no ruby
-    str = str.replace(/‘/g, '<rb class="kanji">');
-    str = str.replace(/’/g, '</rb>');
-    str = replaceBetween(str, '<ruby', '</ruby', /ruby|rb/g, 'span', function (s) { return !s.includes('('); });
-    str = str.replace(/⦉/g, '<span class="kunten punctuation">');
-    str = str.replace(/⦊/g, '</span>');
-    str = str.replace(/(punctuation">)(〻)/g, 'ninojiten $1<sup>$2</sup>');
-    str = str.replace(/(punctuation">―)/g, 'dash $1');
-    str = str.replace(/(punctuation">…)/g, 'ellipsis $1');
-    str = str.replace(/(punctuation">[」』])/g, 'right-corner-bracket $1');
-
-
-
-    str = str.replace(/‹/g, '<span class="kunten has-furigana saidoku"><sub class="saidoku-furigana">');
-    str = str.replace(/(saidoku">[^›]*)›«/g, 'has-okurigana $1</sub><sub class="saidoku-okurigana">');
-    str = str.replace(/«/g, '<span class="kunten has-okurigana saidoku"><sub class="saidoku-okurigana">');
-    str = str.replace(/[›»]/g, '</sub></span>');
-
-    str = str.replace(/\[(.)\]/g, '<span class="kunten kaeriten"><sub>$1</sub></span>');
-    str = str.replace(/\[(.)(レ)\]/g, '<span class="kunten kaeriten"><sub>$1</sub><sub>$2</sub></span>');
-    str = str.replace(/(kaeriten"><sub)(>一)/g, '$1 class="ichiten"$2');
     return str;
 }
 
