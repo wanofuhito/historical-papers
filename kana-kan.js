@@ -57,20 +57,7 @@ function toHTML(str) {
     str = str.replace(new RegExp(`”“⌊([${punctuationStr}])⌋`, 'g'), '⦉$1⦊');
     // now, str has been fully annotated
 
-    // process other brackets
-    str = str.replace(/“/g, '<ruby class="unit">');
-    str = str.replace(/(unit">‘)/g, 'has-multiple-kanji $1');
-    str = str.replace(/(unit">‘([^⌊’]*⌊){2}[^⌊’]*’)/g, 'has-2-kanji $1');
-    str = str.replace(/(unit">‘([^⌊’]*⌊){3}[^⌊’]*’)/g, 'has-3-kanji $1');
-    str = str.replace(/(unit">(‘[^’]*’)?[^‘”]*\()/g, 'has-furigana $1');
-    str = str.replace(/(unit">(‘[^’]*’)?[^‘”]*\([^\)]\))/g, 'has-only-1-furigana $1');
-    str = str.replace(/(unit">(‘[^’]*’)?[^‘”]*\([^\)][^\)]?\))/g, 'has-less-than-3-furigana $1');
-    str = str.replace(/(unit">(‘[^’]*’)?[^‘”]*”[^‘”]*has-furigana)/g, 'next-unit-has-furigana $1');
-    str = str.replace(/(unit">(‘[^’]*’)?[^‘”]*\{)/g, 'has-okurigana $1');
-    str = str.replace(/”/g, '</ruby>');
-    str = str.replace(/⌊/g, '<rb class="kanji">');
-    str = str.replace(/⌋/g, '</rb>');
-    // no furigana, use no <ruby>
+      // no furigana, use no <ruby>
     while (str !== (str = str.replace(/(‘[^’]*<\/?)(ruby|rb)/g, '$1span'))); // inside kanji must have no ruby
     str = str.replace(/‘/g, '<rb class="kanji">');
     str = str.replace(/’/g, '</rb>');
