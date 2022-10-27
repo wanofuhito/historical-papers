@@ -32,3 +32,10 @@
     document.getElementById(id).innerHTML =  "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
     convertKanbunDiv(document.getElementById(id));
   }
+  function toHTMLNone(str) {
+      return str;
+  }
+  function convertKanaDiv(id) {
+      div = document.getElementById(id)
+      div.childNodes.forEach(function (p) { p.innerHTML = toHTMLNone(p.textContent); });
+  }
