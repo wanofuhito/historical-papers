@@ -4,16 +4,21 @@
 <meta charset="utf-8">
 <title>サンプル</title>
 <link href="kanbun.css" href="stylesheet" href="text/css">
+<script src="kana-kan.js"></script>
 </head>
 
 <h1>本日の内容</h1>
   <div class="kanbun betagumi okurigana-sinking content box" id="container">
       <p>感ジテハ[レ]時ニ花ニモ濺(そそ)ギ[レ]淚ヲ，恨ミデハ[レ]別レヲ鳥ニモ驚カス[レ]心ヲ。</p>
+      <p class="kanbun betagaki">縦書きレイアウトのWebコンテンツ実践セミナーです。</p>
+      <p>6月<span class="combine">19</span>日のお知らせです。</p>
+      <p><ruby>日本語<rt>にほんご</rt></rub>の<ruby>作文<rt>さくぶん</rt></ruby>です。</p>
+     <p><span class="underline">重要な箇所</span>は線を引きます。</p>
+    <p><span class="mark">重要な箇所</span>に圏点をつけます。</p>
+    
     </div>
-<p class="kanbun betagaki">縦書きレイアウトのWebコンテンツ実践セミナーです。</p>
-<p>6月<span class="combine">19</span>日のお知らせです。</p>
-<p><ruby>日本語<rt>にほんご</rt></rub>の<ruby>作文<rt>さくぶん</rt></ruby>です。</p>
-<p><span class="underline">重要な箇所</span>は線を引きます。</p>
-<p><span class="mark">重要な箇所</span>に圏点をつけます。</p>
+<script>
+   convertKanbunDiv(document.getElementById('container'));
+</script>
 </body>
 </html>
