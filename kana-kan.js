@@ -69,11 +69,7 @@ function toHTML(str) {
     str = str.replace(/(punctuation">…)/g, 'ellipsis $1');
     str = str.replace(/(punctuation">[」』])/g, 'right-corner-bracket $1');
 
-    // process basic brackets
-    str = str.replace(/\(/g, '<rt class="furigana">');
-    str = str.replace(/\)/g, '</rt>');
-    str = str.replace(/\{/g, '<span class="kunten okurigana"><sup>');
-    str = str.replace(/\}/g, '</sup></span>');
+
 
     str = str.replace(/‹/g, '<span class="kunten has-furigana saidoku"><sub class="saidoku-furigana">');
     str = str.replace(/(saidoku">[^›]*)›«/g, 'has-okurigana $1</sub><sub class="saidoku-okurigana">');
