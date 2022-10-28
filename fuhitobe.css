@@ -6,9 +6,12 @@ div.box{
     background: #F5F6CE;
     border: 1px solid #999;
 }
+.vertical-p {
+    text-align: right;
+}
 .vertical {
-	-ms-writing-mode: tb-rl;
-	writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
     text-orientation: upright;
     text-align: right;
 }
