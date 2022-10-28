@@ -6,10 +6,10 @@ div.box{
     background: #F5F6CE;
     border: 1px solid #999;
 }
-.vertical-p {
+_:lang(x)+_:-webkit-full-screen-document, .vertical-p {
     text-align: right;
 }
-.vertical {
+_:lang(x)+_:-webkit-full-screen-document, .vertical {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     text-orientation: upright;
