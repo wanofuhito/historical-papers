@@ -15,4 +15,5 @@ div.box{
     writing-mode: vertical-rl;
     text-orientation: upright;
     text-align: right;
+    display: inline-block;
 }
