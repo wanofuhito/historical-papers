@@ -59,16 +59,13 @@
   </article>
 
   <footer>
-    <form method="post" action="viewer.html" method="get">
-      <div>
-        <label for="search">検索する</label>
-        <input type="search" name="s" placeholder="キーワードを入力">
-      </div>
-      <input type="submit" value="検索する" />
-    </form>
     <button type="button" onclick="copy_raw_data();">
        テキストコピー
 　　　</button>
+    <button type="button" onclick="display_search_screen();">
+       ページ内検索
+　　　</button>
+
   </footer>
   <script>
     function valueChanged(id){
