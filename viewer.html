@@ -16,7 +16,8 @@
 
 <body>
   <header>
-    <select id="kan" onchange="valueChanged('kan')">
+    <div>
+      <select id="kan" onchange="valueChanged('kan')">
       <option value="01rolls.txt">第01巻　神代上</option>
       <option value="02rolls.txt">第02巻　神代下</option>
       <option value="03rolls.txt">第03巻　神武天皇</option>
@@ -48,11 +49,12 @@
       <option value="29rolls.txt">第29巻　天武天皇　下</option>
       <option value="30rolls.txt">第30巻　持統天皇</option>
     </select>
-    <div class="copy_button">
-      <a href=""javascript:copy_raw_data();"">テキストコピー</a>
-    </div>
-    <div class="copy_button">
-      <a href=""javascript:copy_tagged_data();"">タグ付きテキストコピー</a>
+      <div class="copy_button">
+        <a href="javascript:copy_raw_data();">テキストコピー</a>
+      </div>
+      <div class="copy_button">
+        <a href="javascript:copy_tagged_data();">タグ付きテキストコピー</a>
+      </div>
     </div>
   </header>
 
