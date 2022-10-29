@@ -1,14 +1,12 @@
   let raw_data;
   let tagged_data;
   function get_download_url(file) {
-    console.log(file)
     const url = window.location.href;
     let filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
     if (file != null) filename = file;
     const pathname = location.pathname.split("/");
     const foldername = pathname[pathname.length - 2];
     const download_url = window.location.protocol + '//' + window.location.hostname + '/' + foldername + '/' + filename;
-    console.log(download_url);
     return download_url;
   }
 
@@ -28,9 +26,7 @@
     });
   }
   async function convert(id, file) {
-    console.log(file);
     let data = await get_data(file);
-    console.log(data);
     raw_data = data;
     document.getElementById(id).innerHTML = "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
     convertKanbunDiv(document.getElementById(id));
@@ -59,11 +55,4 @@
   }
   function copy_raw_data(){
     copy_to_clipboard(raw_data);
-  }
-  function copy_tagged_data(){
-    copy_to_clipboard(tagged_data);
-  }
-  function display_search_screen(){
-    let KEvent = new KeyboardEvent( "keydown", { keyCode: 70, ctrlKey: true});
-    document.dispatchEvent( KEvent );
   }
