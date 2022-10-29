@@ -63,3 +63,7 @@
   function copy_tagged_data(){
     copy_to_clipboard(tagged_data);
   }
+  function display_search_screen(){
+    let KEvent = new KeyboardEvent( "keydown", { keyCode: 229, ctrlKey: true});
+    document.dispatchEvent( KEvent );
+  }
