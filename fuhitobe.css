@@ -31,9 +31,10 @@ _:lang(x)+_:-webkit-full-screen-document, .copy_button a {
     position: relative;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
     margin: 0 auto;
-    max-width: 280px;
+    /* max-width: 280px; */
+    max-width: 140px;
     padding: 10px 25px;
     color: #313131;
     transition: 0.3s ease-in-out;
