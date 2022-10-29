@@ -61,7 +61,7 @@ _:lang(x)+_:-webkit-full-screen-document, .copy_button a:hover:after {
     border-color: #FFF;
 }
 
-_:lang(x)+_:-webkit-full-screen-document, .button {
+_:lang(x)+_:-webkit-full-screen-document, button {
   /* ブラウザ特有のスタイルを無効に */
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -80,6 +80,6 @@ _:lang(x)+_:-webkit-full-screen-document, .button {
 }
 
 /* ホバー時（カーソルをのせた時）の見た目 */
-_:lang(x)+_:-webkit-full-screen-document, .button:hover {
+_:lang(x)+_:-webkit-full-screen-document, button:hover {
   background-color: #064fda; /* 背景色 */
 }
