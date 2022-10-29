@@ -2,8 +2,6 @@
   let tagged_data;
   function get_download_url(filename) {
     const url = window.location.href;
-   // let filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
-   // if (file != null) filename = file;
     const pathname = location.pathname.split("/");
     const foldername = pathname[pathname.length - 2];
     const download_url = window.location.protocol + '//' + window.location.hostname + '/' + foldername + '/' + filename;
@@ -31,17 +29,6 @@
     document.getElementById(id).innerHTML = "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
     convertKanbunDiv(document.getElementById(id));
     tagged_data = document.getElementById(id).innerHTML;
-  }
-
-  function toHTMLNone(str) {
-    return str;
-  }
-
-  function convertKanaDiv(id) {
-    div = document.getElementById(id)
-    div.childNodes.forEach(function (p) {
-      p.innerHTML = toHTMLNone(p.textContent);
-    });
   }
 
   function copy_to_clipboard(copy_data) {
