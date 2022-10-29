@@ -16,7 +16,7 @@
 
 <body>
   <header>
-    <div >
+    <div>
       <select id="kan" onchange="valueChanged('kan')">
       <option value="01rolls.txt">第01巻　神代上</option>
       <option value="02rolls.txt">第02巻　神代下</option>
@@ -59,7 +59,14 @@
   </article>
 
   <footer>
-     <button type="button" onclick="copy_raw_data();">
+    <form method="post" action="URL" method="get">
+      <div>
+        <label for="search">検索する</label>
+        <input type="search" name="s" placeholder="キーワードを入力">
+      </div>
+      <input type="submit" value="検索する" />
+    </form>
+    <button type="button" onclick="copy_raw_data();">
        テキストコピー
 　　　</button>
   </footer>
