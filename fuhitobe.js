@@ -1,7 +1,8 @@
   function get_download_url(file){
+    console.log(file)
     const url = window.location.href;
     let filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
-    if (file != undefine)
+    if (file != null)
       filename = file;
     const pathname = location.pathname.split("/");
     const foldername = pathname[pathname.length-2];
