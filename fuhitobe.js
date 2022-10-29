@@ -57,3 +57,9 @@
         /* clipboard write failed */
       });
   }
+  function copy_raw_data(){
+    copy_to_clipboard(raw_data);
+  }
+  function copy_tagged_data(){
+    copy_to_clipboard(tagged_data);
+  }
