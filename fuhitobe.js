@@ -64,6 +64,6 @@
     copy_to_clipboard(tagged_data);
   }
   function display_search_screen(){
-    let KEvent = new KeyboardEvent( "keydown", { keyCode: 229, ctrlKey: true});
+    let KEvent = new KeyboardEvent( "keydown", { keyCode: 70, ctrlKey: true});
     document.dispatchEvent( KEvent );
   }
