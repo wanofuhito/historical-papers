@@ -1,16 +1,18 @@
-  function get_download_url(){
+  function get_download_url(file){
     const url = window.location.href;
-    const filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
+    let filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
+    if (file != undefine)
+      filename = file;
     const pathname = location.pathname.split("/");
     const foldername = pathname[pathname.length-2];
     const download_url = window.location.protocol + '//' + window.location.hostname + '/'+ foldername + '/' + filename;
     console.log(download_url);
     return download_url;
   }
-  function get_data() {
+  function get_data(file) {
     return new Promise((resolve, reject) => {
         //axios.get('https://wanofuhito.github.io/nihon-shoki/14rolls.txt')
-        axios.get(get_download_url())
+        axios.get(get_download_url(file))
             .then(function (response) {
                 // 成功時に実行
                 // response.dataに実際のデータが入っている
@@ -26,8 +28,8 @@
             });
     });
   }
-  async function convert(id) {
-    let data = await get_data();
+  async function convert(id,file) {
+    let data = await get_data(file);
     console.log(data);
     document.getElementById(id).innerHTML =  "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
     convertKanbunDiv(document.getElementById(id));
