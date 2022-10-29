@@ -56,3 +56,9 @@
   function copy_raw_data(){
     copy_to_clipboard(raw_data);
   }
+  function get_kan(){
+    let url = new URL(window.location.href);
+    let params = url.searchParams;
+    console.log(params.get('kan'));
+    return params.get('kan'));
+  }
