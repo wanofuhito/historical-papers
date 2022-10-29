@@ -29,6 +29,7 @@
     });
   }
   async function convert(id,file) {
+    console.log(file);
     let data = await get_data(file);
     console.log(data);
     document.getElementById(id).innerHTML =  "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
