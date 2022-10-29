@@ -1,9 +1,9 @@
   let raw_data;
   let tagged_data;
-  function get_download_url(file) {
+  function get_download_url(filename) {
     const url = window.location.href;
-    let filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
-    if (file != null) filename = file;
+   // let filename = url.match(".+/(.+?)\.[a-z]+([\?#;].*)?$")[1] + '.txt';
+   // if (file != null) filename = file;
     const pathname = location.pathname.split("/");
     const foldername = pathname[pathname.length - 2];
     const download_url = window.location.protocol + '//' + window.location.hostname + '/' + foldername + '/' + filename;
@@ -60,5 +60,5 @@
     let url = new URL(window.location.href);
     let params = url.searchParams;
     console.log(params.get('kan'));
-    return params.get('kan'));
+    return params.get('kan');
   }
