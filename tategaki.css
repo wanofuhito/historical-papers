@@ -18,3 +18,9 @@ p {
   background: #f2f2f2;
   padding: 0.5em;
 }
+p.title {
+  font-size: 22px;
+  font-weight:bold;
+  background: #f2f2f2;
+  padding: 0.5em;
+}
