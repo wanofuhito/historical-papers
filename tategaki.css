@@ -25,9 +25,9 @@ _:lang(x)+_:-webkit-full-screen-document, p.title {
   padding: 0.5em;
 }
 ul {
-  border: 2px  dashed; 
+  border: 2px gray dashed; 
   background: #f2f2f2;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 1;
+  margin: 1;
 }
