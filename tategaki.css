@@ -4,6 +4,10 @@ body{
   writing-mode: vertical-rl;
   text-orientation: upright; /* すべて縦方向に表示 */
 }
+_:lang(x)+_:-webkit-full-screen-document, div.content {
+  font-size: 20px;
+  height: 30em;
+}
 a {
   text-decoration: none;
   border-right: 1px dashed;
