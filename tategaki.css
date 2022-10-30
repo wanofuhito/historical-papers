@@ -11,4 +11,6 @@ a {
 }
 p {
   text-indent: 1em;
+  background: #f2f2f2;
+  padding: 0.5em;
 }
