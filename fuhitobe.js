@@ -1,5 +1,6 @@
   let raw_data;
   let tagged_data;
+
   function get_download_url(filename) {
     const url = window.location.href;
     const pathname = location.pathname.split("/");
@@ -40,12 +41,32 @@
         /* clipboard write failed */
       });
   }
-  function copy_raw_data(){
+
+  function copy_raw_data() {
     copy_to_clipboard(raw_data);
   }
-  function get_kan(){
+
+  function get_kan() {
     let url = new URL(window.location.href);
     let params = url.searchParams;
     console.log(params.get('kan'));
     return params.get('kan');
+  }
+
+  function toRubyHTML(str) {
+    const keys = [/(＜)/g, /(＞)/g, /(《)/g, /(》)/g];
+    const reps = ["<ruby>", "</ruby>", "<rt>", "</rt>"];
+    for (let i = 0; i < keys.length; i++) {
+      str = str.replace(keys[i], reps[i]);
+    }
+    return str;
+  }
+
+  async function convertKana(id) {
+    let data = await get_data(file);
+    let div = document.getElementById(id);
+    div.innerHTML = "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
+    div.childNodes.forEach(function (p) {
+      p.innerHTML = toRubyHTML(p.textContent);
+    });
   }
