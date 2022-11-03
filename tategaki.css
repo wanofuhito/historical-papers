@@ -5,7 +5,7 @@ _:lang(x)+_:-webkit-full-screen-document, body{
   text-orientation: upright; 
 }
 _:lang(x)+_:-webkit-full-screen-document, div.content {
-  font-size: 20px;
+  font-size: 19px;
   height: 33em;
 }
 _:lang(x)+_:-webkit-full-screen-document, a {
