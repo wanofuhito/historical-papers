@@ -6,7 +6,7 @@ _:lang(x)+_:-webkit-full-screen-document, body{
 }
 _:lang(x)+_:-webkit-full-screen-document, div.content {
   font-size: 19px;
-  height: 34em;
+  height: 36em;
 }
 _:lang(x)+_:-webkit-full-screen-document, a {
   text-decoration: none;
