@@ -32,7 +32,7 @@
     return str;
   }
 
-  async function convertRubyTag(id) {
+  async function convertRubyTag(id,file) {
     let data = await get_data(file);
     let div = document.getElementById(id);
     div.innerHTML = "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
