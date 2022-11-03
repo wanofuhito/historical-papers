@@ -2,7 +2,7 @@
 _:lang(x)+_:-webkit-full-screen-document, body{
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-  text-orientation: mixed; 
+  text-orientation: upright; 
 }
 _:lang(x)+_:-webkit-full-screen-document, div.content {
   font-size: 20px;
