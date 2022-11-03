@@ -59,6 +59,7 @@
     for (let i = 0; i < keys.length; i++) {
       str = str.replace(keys[i], reps[i]);
     }
+    console.log(str);
     return str;
   }
 
