@@ -2,11 +2,11 @@
 _:lang(x)+_:-webkit-full-screen-document, body{
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-  text-orientation: upright; /* すべて縦方向に表示 */
+  text-orientation: mixed; 
 }
 _:lang(x)+_:-webkit-full-screen-document, div.content {
   font-size: 20px;
-  height: 34em;
+  height: 33em;
 }
 _:lang(x)+_:-webkit-full-screen-document, a {
   text-decoration: none;
