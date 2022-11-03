@@ -22,7 +22,7 @@
     });
   }
 
-  function toRubyHTML(str) {
+  function toRubyTag(str) {
     const keys = [/(＜)/g, /(＞)/g, /(《)/g, /(》)/g];
     const reps = ["<ruby>", "</ruby>", "<rt>", "</rt>"];
     for (let i = 0; i < keys.length; i++) {
@@ -32,11 +32,11 @@
     return str;
   }
 
-  async function convertKana(id) {
+  async function convertRubyTag(id) {
     let data = await get_data(file);
     let div = document.getElementById(id);
     div.innerHTML = "<p>" + data.replace(/\n/g, "</p><p>") + "</p>";
     div.childNodes.forEach(function (p) {
-      p.innerHTML = toRubyHTML(p.textContent);
+      p.innerHTML = toRubyTag(p.textContent);
     });
   }
