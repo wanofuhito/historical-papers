@@ -41,11 +41,15 @@
   </style>
 </head>
 <body>
+<div class="content">
+  <p class="title">
+    全文検索
+  </p>
+  <input onkeyup="search(this.value)" size="15" autocomplete="off" autofocus placeholder="検索ワード" />
+  <span id="inputWord"></span> <span id="resultCount"></span>
+  <div id="result"></div>
 
-<h1>全文検索</h1>
-<input onkeyup="search(this.value)" size="15" autocomplete="off" autofocus placeholder="検索ワード" />
-<span id="inputWord"></span> <span id="resultCount"></span>
-<div id="result"></div>
+</div>
 
 <script>
 function search(query) {
