@@ -12,15 +12,21 @@
 
 </head>
 <body>
-  <div class="content" contenteditable="true">
-    <p class="title">
-      全文検索
-    </p>
-    <input onkeyup="search(this.value)" size="15" autocomplete="off" autofocus placeholder="検索ワード" />
-    <p>
-      <span id="inputWord"></span> <span id="resultCount" class="num"> </span>
-    </p>
-    <div id="result" class="content"></div>
-  </div>
+  <header>
+  </header>
+  <article>
+    <div class="content" contenteditable="true">
+      <p class="title">
+        全文検索
+      </p>
+      <input onkeyup="search(this.value)" size="15" autocomplete="off" autofocus placeholder="検索ワード" />
+      <p>
+        <span id="inputWord"></span> <span id="resultCount" class="num"> </span>
+      </p>
+      <div id="result" class="content"></div>
+    </div>
+  </article>
+  <footer>
+  </footer>
 </body>
 </html>
