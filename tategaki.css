@@ -12,6 +12,7 @@ _:lang(x)+_:-webkit-full-screen-document, a {
   text-decoration: none;
   border-right: 1px dashed;
   padding-right: 3px;
+  cursor: pointer;
 }
 _:lang(x)+_:-webkit-full-screen-document, p {
   text-indent: 1em;
