@@ -62,5 +62,5 @@ function showResult(html) {
 
 function showResultCount(count, total) {
   var el = document.getElementById('resultCount');
-  el.innerHTML = '<b　class="num">' + count + '</b> 件見つかりました（ <span class="num">' + total + '</span>件中）';
+  el.innerHTML = '<b　class="num">' + count + '</b> 件見つかりました( <span class="num">' + total + '</span>件中)';
 }
