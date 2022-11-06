@@ -21,7 +21,7 @@
 
   <article>
     <button type="button" onclick="load_data();">
-       データ読込
+       Index作成
 　　 </button>
 
   </article>
@@ -173,7 +173,7 @@
         data["title"] = title_array[i];
         data["filename"] = filename_array[i];
         let txtdata = await get_data(filename_array[i]);
-        data["body"] = txtdata.replace(/\n/g, ",");
+        data["body"] = txtdata.replace(/\n/g, ",").replace(/(\[.\])/g, " ");
         datalist.push(data);
       }
 
