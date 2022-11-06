@@ -40,6 +40,9 @@
     .item_excerpt b {
       background: pink;
     }
+    num {
+      text-combine-upright: all;
+    }
   
   
   </style>
@@ -52,7 +55,7 @@
   </p>
   <input onkeyup="search(this.value)" size="15" autocomplete="off" autofocus placeholder="検索ワード" />
   <p>
-  <span id="inputWord"></span> <span id="resultCount"></span>
+  <span id="inputWord"></span> <span id="resultCount" class="num"> </span>
   </p>
   <div id="result" class="content"></div>
   
