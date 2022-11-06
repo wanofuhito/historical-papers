@@ -40,6 +40,38 @@
     .item_excerpt b {
       background: pink;
     }
+  
+  form {
+  writing-mode: vertical-rl;
+  
+  > .field {
+   width: 80px;
+ 
+    > .label {
+      display: block;
+    }
+
+    > .inputfield {
+      writing-mode: initial;
+      transform: rotate(90deg);
+      transform-origin: top left;
+
+      width: 120px;
+      height: 20px;
+      margin-right: -140px;
+    }
+    
+    > button {
+      writing-mode: initial;
+      transform: rotate(90deg);
+      transform-origin: top left;
+
+      width: 80px;
+      height: 30px;
+      margin-right: -80px;
+    }
+  }
+}
   </style>
 
 </head>
@@ -54,7 +86,21 @@
   </p>
   <div id="result" class="content"></div>
   
-
+<form class="vertical-form">
+  <div class="field">
+    <label class="label" for="name">名前</label>
+    <input id="name" class="inputfield" type="text" placeholder="山田 太郎">
+  </div>
+  
+  <div class="field">
+    <label class="label" for="message">用件</label>
+    <textarea id="message" class="inputfield" placeholder="用件をかいてください"></textarea>
+  </div>
+  
+  <div class="field">
+    <button type="submit">送信</button>
+  </div>
+</form>
 </div>
 
 <script>
