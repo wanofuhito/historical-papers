@@ -13,16 +13,16 @@
 </head>
 <body>
   <header>
-    <input onkeyup="search(this.value)" size="5" autocomplete="off" autofocus placeholder="検索ワード" />
   </header>
   <article>
     <div class="content" contenteditable="true">
       <p class="title">
         全文検索
+        <input onkeyup="search(this.value)" size="7" autocomplete="off" autofocus placeholder="検索ワード" />
       </p>
       
       <p>
-        <span id="inputWord"></span> <span id="resultCount" class="num"> </span>
+        <span id="inputWord"></span> <span id="resultCount" > </span>
       </p>
       <div id="result" class="content"></div>
     </div>
