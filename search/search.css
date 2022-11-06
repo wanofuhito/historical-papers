@@ -23,6 +23,7 @@
       margin: 0.5em 0.5em 0.5em;
       border: dashed 1px lightgray;
       font-size: smaller;
+      text-orientation: mixed; 
     }
 
     .item_excerpt b {
