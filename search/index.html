@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="True" />
+  <link rel="canonical" href="https://wanofuhito.github.io/">
+  <link rel="stylesheet" href="../tategaki.css">
+  <title>全文検索</title>
+  <script src="search.js"></script>
+  <link rel="stylesheet" href="search.css">
+
+</head>
+<body>
+  <header>
+  </header>
+  <article>
+    <div class="content" >
+      <p>
+        全文検索
+        <input onkeyup="search(this.value)" size="7" autocomplete="off" autofocus placeholder="検索ワード" />
+      </p>  
+      <p>
+        <span id="inputWord"></span> <span id="resultCount" > </span>
+      </p>
+      <div id="result" class="content"></div>
+    </div>
+  </article>
+  <footer>
+  </footer>
+</body>
+</html>

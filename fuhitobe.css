@@ -1,0 +1,50 @@
+_:lang(x)+_:-webkit-full-screen-document, div.content {
+  font-size: 20px;
+  height: 30em;
+}
+
+_:lang(x)+_:-webkit-full-screen-document, div.box {
+  background: #F5F6CE;
+  border: 1px solid #999;
+}
+
+_:lang(x)+_:-webkit-full-screen-document, div.box-gray {
+  background: #f2f2f2;
+  border: 1px solid #999;
+}
+
+_:lang(x)+_:-webkit-full-screen-document, .vertical-p {
+  text-align: right;
+}
+
+_:lang(x)+_:-webkit-full-screen-document, .vertical {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: right;
+  display: inline-block;
+}
+
+_:lang(x)+_:-webkit-full-screen-document, button {
+  /* ブラウザ特有のスタイルを無効に */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  /* 整える */
+  margin: 1em 0; /* 前後の隙間 */
+  padding: 0.6em 1em; /* 塗りの余白 */
+  font-size: 1em; /* フォントサイズ */
+  background-color: #1aa1ff; /* 背景色 */
+  color: #FFF; /* テキストカラー */
+  cursor: pointer; /* カーソルを指マークに */
+  border-radius: 3px; /* 角の丸み */
+  border: 0; /* 枠線を消す */
+  transition: 0.3s; /* ホバーの変化を滑らかに */
+}
+
+/* ホバー時（カーソルをのせた時）の見た目 */
+_:lang(x)+_:-webkit-full-screen-document, button:hover {
+  background-color: #064fda; /* 背景色 */
+}
+

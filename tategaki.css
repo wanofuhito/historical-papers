@@ -1,0 +1,33 @@
+	
+_:lang(x)+_:-webkit-full-screen-document, body{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright; 
+}
+_:lang(x)+_:-webkit-full-screen-document, div.content {
+  font-size: 19px;
+  height: 35em;
+}
+_:lang(x)+_:-webkit-full-screen-document, a {
+  text-decoration: none;
+  border-right: 1px dashed;
+  padding-right: 3px;
+}
+_:lang(x)+_:-webkit-full-screen-document, p {
+  text-indent: 1em;
+  background: #f2f2f2;
+  padding: 0.5em;
+}
+_:lang(x)+_:-webkit-full-screen-document, p.title {
+  font-size: 24px;
+  font-weight:bold;
+  background: #f2f2f2;
+  padding: 0.5em;
+}
+ul {
+  border: 2px gray dashed; 
+  background: #f2f2f2;
+  list-style: none;
+  padding: 1;
+  margin: 1;
+}
