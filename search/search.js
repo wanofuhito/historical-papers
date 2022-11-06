@@ -41,7 +41,7 @@ function createHtml(result) {
 }
 
 function createEntry(url, title, body, startPos, endPos) {
-  return '<div class="item">' +
+  return '<div class="item content">' +
     '<a class="item_title" href="' + url + '">' + title + '</a>' +
     '<div class="item_excerpt">' + excerpt(body, startPos, endPos) + '</div>' +
     '</div>';
