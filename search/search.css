@@ -12,6 +12,12 @@
       margin: 1em;
     }
 
+    .item_title {
+      text-decoration: none;
+      color: #36f;
+      font-weight: bolder;
+    }
+
     .item_excerpt {
       background: #f2f2f2;
       margin: 0.5em 0.5em 0.5em;
