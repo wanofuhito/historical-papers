@@ -4,7 +4,7 @@
   function get_download_url(filename) {
     const url = window.location.href;
     const pathname = location.pathname.split("/");
-    const foldername = pathname[pathname.length - 2] + '/' pathname[pathname.length - 3];
+    const foldername = pathname[pathname.length - 2] + '/' + pathname[pathname.length - 3];
     const download_url = window.location.protocol + '//' + window.location.hostname + '/' + foldername + '/' + filename;
     cosole.log("download_url="+download_url);
     return download_url;
