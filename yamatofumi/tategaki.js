@@ -1,6 +1,7 @@
   function get_download_url(filename) {
     const url = window.location.href;
     const pathname = location.pathname.split("/");
+    console.log("pathname="+pathname);
     const foldername = pathname[pathname.length - 1] + '/' + pathname[pathname.length - 2] + '/' + pathname[pathname.length - 3];
     const download_url = window.location.protocol + '//' + window.location.hostname + '/' + foldername + '/' + filename;
     console.log("download_url="+download_url);
